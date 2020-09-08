@@ -36,6 +36,7 @@ This project relies on the following python packages:
  - nltk
  - scikit-learn
  - sqlalchemy 
+ - time
  - json
  - ploty
  - flask
