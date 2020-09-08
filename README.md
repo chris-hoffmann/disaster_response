@@ -18,19 +18,15 @@ Running the `process_data.py` from the command line merges these two files,
 cleans the data and saves the result in the SQLite database file .
 
 The folder `/models` contains the final model which is based on a random forest classifier. Evoking `train_classifier.py` loads the database, performs 
-hyperparameter screening and evaluates the tuned model on the test set. If the run terminates successfully, two output files are written:
-corresponds to the classification report, which lists the precision, recall and F1 Score for each class. The second output file contains
-the confusion matrix 
+hyperparameter tuning via random grid search and evaluates the tuned model on the test set. If the run terminates successfully, three output files are written:
+1. `classifier.pkl` represents the saved model
+1. `cls_report.pkl` contains the classification which lists the precision, recall and F1 Score for each class as well as the average values
+1. `confusion_matrices.npy` contains the confusion matrix for each class
 
-More details on the model's hyperparameters
-and it's performace on the test set can be found here.
-The script saves the model as pickle file and also outputs the confusion matrix for each class saved as a NumPy binary file and the classification report
-as pickle object. The latter lists the precision, recall and F1 score of each class as well as the averaged measures.
+Further details on the model's hyperparameters and its performace on the test set are summarized here.
 
-The folder `/app` contains material for creating the web application. 
-In it you find `run.py`, which allows for running the application locally.
-The subfolder templates contains html files for the frontend. The design of
-the user interface relies on the Bootstrap framework.
+The folder `/app` contains material for creating the web application. In it you find `run.py`, which allows for running the application locally.
+The subfolder templates contains html files for the frontend. Note that the design of the user interface relies on the Bootstrap framework.
 
 
 ## Dependencies
