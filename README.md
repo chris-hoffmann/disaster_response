@@ -22,7 +22,6 @@ the following files:
 |   |-- __init__.py
 |   |-- app
 |   |   |-- __init__.py
-|   |   |-- runapp.py
 |   |   |-- templates
 |   |   |   |-- about_the_model.html
 |   |   |   |-- go.html
@@ -30,6 +29,7 @@ the following files:
 |   |   `-- utils.py
 |   |-- process_data.py
 |   |-- train_classifier.py
+|   |-- run_app.py
 |   `-- model_details.ipynb
 `-- models
     |-- classifier.pkl
@@ -49,8 +49,7 @@ hyperparameter tuning via random grid search and evaluates the tuned model on th
 
 Further details on the model's hyperparameters and its performace on the test set are summarized in the notebook [`/code/model_details.ipynb`](https://github.com/chris-hoffmann/disaster_response/models/model_details.ipynb).
 
-The folder `/code/app` contains material for creating the web application. In it you find `runapp.py`, which allows for running the application locally, and the subfolder `/templates` that contains the html files for the frontend. Note that the design of the user interface takes advantage of the Bootstrap framework.
-
+The folder `/code/app` contains material for creating the web application. In it you find the subfolder `/templates` that contains the html files for the frontend. Note that the design of the user interface takes advantage of the Bootstrap framework. You can also run the app locally by invoking `run_app.py`. 
 
 ## Dependencies
 This project relies on the following python packages:
