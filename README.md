@@ -47,7 +47,7 @@ hyperparameter tuning via random grid search and evaluates the tuned model on th
 1. `cls_report.pkl` contains the classification report, which lists the precision, recall and F1 score for each class as well as the average values
 1. `confusion_matrix.npy` contains the confusion matrices for each class
 
-Further details on the model's hyperparameters and its performace on the test set are summarized in the notebook [`/code/model_details.ipynb`](https://github.com/chris-hoffmann/disaster_response/models/model_details.ipynb).
+Further details on the model's hyperparameters and its performace on the test set are summarized in the notebook [`/code/model_details.ipynb`](https://github.com/chris-hoffmann/disaster_response/code/model_details.ipynb).
 
 The folder `/code/app` contains material for creating the web application. In it you find the subfolder `/templates` that contains the html files for the frontend. Note that the design of the user interface takes advantage of the Bootstrap framework. You can also run the app locally by invoking `run_app.py`. 
 
