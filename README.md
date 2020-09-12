@@ -1,3 +1,6 @@
+<img src="web_app_snapshot.PNG">
+
+
 # Diaster Response Project
 Data science project on text classification for quick aid delivery.
 
