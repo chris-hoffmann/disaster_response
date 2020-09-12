@@ -1,5 +1,8 @@
-<img src="web_app_snapshot.PNG">
-
+<p align="center">
+  <a href="https://heroku.com">
+    <img src="web_app_snapshot.PNG" alt="Snapshot of web app">
+  </a>
+</p>
 
 # Diaster Response Project
 Data science project on text classification for quick aid delivery.
