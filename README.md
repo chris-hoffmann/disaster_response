@@ -13,11 +13,38 @@ web application that is deployed on [Heroku](https://www.heroku.com/home).
 The project is organized into three main folders that contain
 the following files:
 
+```
+|-- code
+|   |-- __init__.py
+|   |-- app
+|   |   |-- __init__.py
+|   |   |-- __pycache__
+|   |   |   |-- __init__.cpython-36.pyc
+|   |   |   `-- utils.cpython-36.pyc
+|   |   |-- runapp.py
+|   |   |-- templates
+|   |   |   |-- about_the_model.html
+|   |   |   |-- go.html
+|   |   |   `-- master.html
+|   |   `-- utils.py
+|   |-- process_data.py
+|   `-- train_classifier.py
+|-- data
+|   |-- disaster_categories.csv
+|   |-- disaster_messages.csv
+|   `-- disaster_response.db
+`-- models
+    |-- classifier.pkl
+    |-- cls_report.pkl
+    |-- confusion_matrix.npy
+    `-- model_details.ipynb
+```
+
 The folder `/data` contains the raw data in form of two separate csv files (`disaster_categories.csv`, `disaster_messages.csv`).
-Running `process_data.py` from the command line merges these two files,
+Running `/code/process_data.py` from the command line merges these two files,
 cleans the data and saves the result in the SQLite database file `disaster_response.db`.
 
-The folder `/models` contains the final model which is based on a random forest classifier. Evoking `train_classifier.py` loads the database, performs 
+The folder `/models` contains the final model which is based on a random forest classifier. Running `/code/train_classifier.py` loads the database, performs 
 hyperparameter tuning via random grid search and evaluates the tuned model on the test set. If the run terminates successfully, three output files are written:
 1. `classifier.pkl` corresponds to the saved model
 1. `cls_report.pkl` contains the classification report, which lists the precision, recall and F1 score for each class as well as the average values
@@ -31,12 +58,10 @@ The subfolder templates contains html files for the frontend. Note that the desi
 
 ## Dependencies
 This project relies on the following python packages:
+ - sqlalchemy 
  - numpy
  - pandas
  - nltk
  - scikit-learn
- - sqlalchemy 
- - time
- - json
  - ploty
  - flask
