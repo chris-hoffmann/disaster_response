@@ -4,14 +4,14 @@
   </a>
 </p>
 
-# Diaster Response Project
+# Disaster Response Project
 Data science project on text classification for quick aid delivery.
 
 This repository contains material related to a personal project 
-that aims to deliver a machine learning based model for text classification
+that aims to deliver a machine learning-based model for text classification
 to support the coordination of aid efforts during a natural disaster.
 
-Here, we provide python code for processing raw data, hyperparameter tuning and model evaluation.
+Here, we provide python code for processing raw data, hyperparameter tuning, and model evaluation.
 The developed machine learning model was also incorporated into a 
 web application that is deployed on [Heroku](https://www.heroku.com/home).
 
