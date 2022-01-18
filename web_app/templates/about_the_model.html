@@ -1,0 +1,46 @@
+{% extends "master.html" %}
+{% block content %}
+<html>
+
+<body>
+  <div class="about">
+    <div class="col-lg-12 mx-auto">
+      <h2>About the machine learning model</h2>
+      <p class="lead">
+        The motivation for this project was to build a tool that supports the coordination of aid efforts during a
+        natural disaster by identifying and categorizing help messages sent via social media channels. Our machine
+        learning model classifies such text messages into 34 distinctive (non-exclusive) categories, which allows for
+        filtering out calls for immediate help and extracting the nature of a possible emergency. In an ideal scenario,
+        the critical messages would then be forwarded to the relevant organization to accelerate aid delivery and
+        prevent further damage.
+      <p class="lead">
+        The underlying data are publicly available from <a
+          href="https://appen.com/datasets/combined-disaster-response-data">here</a>.
+        The merged and cleaned dataset employed for modeling is available as an SQLite database file, which can be
+        downloaded from this <a href="https://github.com/chris-hoffmann/disaster_response">GitHub repository</a>.
+        Python code for data processing, hyperparameter tuning, and model evaluation is also available from there.
+        Feature extraction from text messages followed standard protocols: Word tokens were transformed to their base
+        form using the <a href="https://wordnet.princeton.edu">WordNet</a> Lemmatizer.
+        Then, a count matrix of word tokens was generated. This matrix was subsequently converted into a tf-idf (term
+        frequency times inverse document frequencies) representation that was employed for modeling.
+        Several classifiers were tested using Scikit-learn. The parameters for feature extraction and classification
+        were further refined by applying a random hyperparameter search. For the deployed model, a classifier based on
+        logistic regression was chosen. More information regarding the selected hyperparameters and the performance of
+        different
+        models determined on a hold-out set can be found in the dedicated <a
+          href="https://github.com/chris-hoffmann/disaster_response">GitHub repository</a>
+        mentioned above.
+      </p>
+      <p class="lead">
+        For the web application, which was built using three excellent libraries: Flask for the backend, Bootstrap for
+        the frontend, and Plotly for plotting summary statistics, we integrate a text classifier based on logistic
+        regression.
+        We chose the Heroku platform for deploying the app.
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>
+{% endblock %}

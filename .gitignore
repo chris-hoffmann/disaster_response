@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.ipynb_checkpoints
+
+*_model.pkl
+
+code/
+experiments/
+data/
