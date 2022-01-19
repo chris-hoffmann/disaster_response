@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.ipynb_checkpoints
+
+*_model.pkl
+model_comparison_two_columns_fmt.ipynb
